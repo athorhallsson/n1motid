@@ -4,7 +4,7 @@
       <img id="logo" src="../assets/logo_white.png">
       <span class="studios">
         <el-select v-model="studio" @change="switchStudio" placeholder="Studio">
-          <el-option v-for="s in studios" :key="s" :label="'Stúdíó ' + s" :value="s"></el-option>
+          <el-option v-for="s in studios" :key="s" :label="'' + s" :value="s"></el-option>
         </el-select>
       </span>
       <span class="pagination">
@@ -64,7 +64,7 @@
         <el-form-item label="Netfang">
           <el-input v-model="order.email" auto-complete="off"></el-input>
         </el-form-item>
-        <el-form-item label="Athugasemd">
+        <el-form-item label="Heimilisfang/Athugasemd">
           <el-input v-model="order.information" type="textarea" auto-complete="off"></el-input>
         </el-form-item>
       </el-form>
@@ -74,10 +74,10 @@
       </span>
     </el-dialog>
     <el-dialog custom-class="initialdialog" :visible.sync="initialDialog">
-      <h2>Árshátíð MA 2022</h2>
-      <p>Hérna geturu pantað myndir frá Árshátíð MA 2022 eða hlaðið þeim niður með því að opna mynd, hægri smella og velja Save (eða draga í möppu).</p>
-      <p>Myndirnar eru settar í körfuna með því að smella á +. Stærðin á myndunum er 15x20 cm og verðið er 500 kr./stk. Þar er hægt að velja um svarthvítt eða lit.</p>
-      <p>Látið er vita með SMS skilaboðum þegar pöntun er tilbúin til afhendingar í Pedromyndum Skipagötu 16.</p>
+      <h2>N1 mót KA 2022</h2>
+      <p>Hérna geturu pantað myndir frá N1 móti KA 2022. Hægt er að hlaða niður hópmyndunum með því að opna mynd, hægri smella og velja Save (eða draga í möppu).</p>
+      <p>Eingöngu er hægt að panta aðrar myndir á pappír. Myndirnar eru settar í körfuna með því að smella á +. Stærðin á myndunum er 15x20 cm og verðið er 1500 kr./stk. Þar er hægt að velja um svarthvítt eða lit.</p>
+      <p>Myndirnar eru sendar með Íslandspósti og heimsendingin kostar 700 kr.</p>
       <i class="el-icon-information info"></i>
     </el-dialog>
   </div>
@@ -103,8 +103,8 @@ export default {
       cart: [],
       dialogVisible: false,
       dialogFormVisible: false,
-      studios: [ 'A', 'B', 'C' ],
-      studio: 'A',
+      studios: [ 'Fimmtudagur', 'Föstudagur', 'Laugardagur' ],
+      studio: 'Fimmtudagur',
       initialDialog: true,
       cartDialogVisible: false,
       selectedCartImage: {},
